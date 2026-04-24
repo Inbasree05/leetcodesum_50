@@ -1,0 +1,16 @@
+class Solution {
+    int missingNum(int arr[]) {
+        // code here
+        int n=arr.length;
+        int sum1=0;
+        for(int i=0;i<n;i++){
+            sum1^=arr[i];
+        }
+        int sum2=0;
+        for(int i=1;i<=n+1;i++){
+            sum2^=i;
+        }
+        int total=sum1^sum2;
+        return total;
+    }
+}
